@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+  color: var(--background-end-rgb);
+  background-color: var(--foreground-rgb);
+}
+
+.custom-button {
+  box-shadow: 5px 5px 1px rgb(4, 0, 255);
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    box-shadow: 5px 5px 10px rgb(25, 0, 255);
+  }
+}
+
+.shadow02{
+  box-shadow: 5px 5px 1px rgb(0, 0, 0, .9);
+}
+
+.neon-text {
+  color: #00ff00;
+  /* Neon green color */
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  animation: neon-glow 1s ease-in-out infinite;
+}
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+
+  50% {
+    text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+}
